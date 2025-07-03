@@ -1,25 +1,11 @@
-# 🐍 Python
+# 🐍 Fichiers Python compilés
 __pycache__/
-*.py[cod]
-*.pyo
-*.pyd
+*.pyc
 
-# 📦 Packages & builds
+# 📦 Environnement virtuel
 env/
 venv/
-build/
-dist/
-*.spec
 
-# 📊 Données locales
-*.xlsx
-*.csv
-*.json
-
-# 💻 Config IDE (VSCode/PyCharm)
-.vscode/
-.idea/
-
-# 📁 Fichiers systèmes
+# 🗂️ Fichiers temporaires & systèmes
 .DS_Store
 Thumbs.db
