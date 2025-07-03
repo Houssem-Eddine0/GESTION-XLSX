@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>📤 Génération Retour TO</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_projet4.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📤 Génération Retour TO</h1>
+
+    <input type="text" id="to" placeholder="Numéro TO (facultatif)">
+
+    <div id="zone-feuilles">
+      <!-- Blocs de feuille TO dynamiques ici -->
+    </div>
+
+    <button type="button" id="ajouter-feuille">➕ Ajouter une feuille</button>
+    <button type="button" id="gen-retour">📄 Générer le fichier TO</button>
+
+    <p id="feedback-retour"></p>
+    <p><a href="/">⬅️ Retour</a></p>
+
+    <script src="{{ url_for('static', filename='projet6.js') }}"></script>
+  </div>
+  <footer> Version : <strong>v1.7.1</strong> — Réalisé par <em>NANE Houssem-Eddine (Stagiaire 2025)</em> 🛠️ </footer>
+</body>
+</html>

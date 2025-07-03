@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>⚙️ Gestion Ciblée</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_projet3.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Gestion Ciblée : Ajout / Suppression / Modification</h1>
+
+    <form id="formulaire">
+      <input type="text" id="chemin" name="chemin" placeholder="📁 Chemin du dossier" required>
+
+      <div class="favoris-bar">
+        <button type="button" id="btn-ajouter">⭐ Ajouter aux favoris</button>
+        <button type="button" id="btn-supprimer">🗑️ Retirer ce favori</button>
+        <select id="favoris">
+          <option value="">— Favoris enregistrés —</option>
+          {% for fav in favoris %}
+            <option value="{{ fav }}">{{ fav }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <button type="button" id="btnLister">📂 Lister les fichiers</button>
+
+      <select id="fichier" name="fichier" required hidden>
+        <option value="">Sélectionnez un fichier</option>
+      </select>
+
+      <select id="feuille" name="feuille" required hidden>
+        <option value="">Sélectionnez une feuille</option>
+      </select>
+
+      <select name="operation" id="operation" required>
+        <option value="ajouter">➕ Ajouter</option>
+        <option value="supprimer">🗑️ Supprimer</option>
+        <option value="modifier">✏️ Modifier</option>
+      </select>
+
+      <input type="text" name="serial" placeholder="Numéro SERIAL (facultatif)">
+      <input type="text" name="asset" placeholder="Numéro ASSET (facultatif)">
+
+      <div id="bloc-modifier" style="display:none;">
+        <input type="text" name="champ" placeholder="📝 Colonne à modifier (ex: STATUS)">
+        <input type="text" name="valeur" placeholder="💡 Nouvelle valeur (ex: Réformé)">
+      </div>
+
+      <button type="submit">💾 Appliquer l’action</button>
+    </form>
+
+    <div id="resultat"></div>
+
+    <p style="margin-top: 20px;"><a href="/">⬅️ Retour à l’accueil</a></p>
+
+    <script src="{{ url_for('static', filename='projet3.js') }}"></script>
+  </div>
+  <footer> Version : <strong>v1.7.1</strong> — Réalisé par <em>NANE Houssem-Eddine (Stagiaire 2025)</em> 🛠️ </footer>
+</body>
+</html>

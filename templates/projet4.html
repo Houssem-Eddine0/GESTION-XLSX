@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>🧺 Ajout de SERIALs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_projet4.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🧺 Ajout de SERIALs dans un fichier Excel</h1>
+
+    <form id="formulaire">
+      <select id="favoris">
+        <option value="">⭐ Favoris enregistrés</option>
+        {% for chemin in favoris %}
+          <option value="{{ chemin }}">{{ chemin }}</option>
+        {% endfor %}
+      </select>
+      <input type="text" id="chemin" name="chemin" placeholder="📄 Fichier .xlsx" required>
+      <div style="display:flex; gap:10px;">
+        <button type="button" id="btn-ajouter">⭐ Ajouter aux favoris</button>
+        <button type="button" id="btn-supprimer">🗑️ Supprimer ce favori</button>
+      </div>
+
+      <button type="button" id="btnFeuilles">📄 Charger feuilles</button>
+      <select name="feuille" id="feuille" required hidden>
+        <option value="">Sélectionner une feuille</option>
+      </select>
+
+      <textarea name="serials" placeholder="🔢 SERIALS à ajouter (1 par ligne)" rows="6" required></textarea>
+      <button type="submit">💾 Ajouter SERIALs</button>
+    </form>
+
+    <p id="resultat"></p>
+    <p><a href="/">⬅️ Retour à l’accueil</a></p>
+
+    <script src="{{ url_for('static', filename='projet4.js') }}"></script>
+  </div>
+  <footer> Version : <strong>v1.7.1</strong> — Réalisé par <em>NANE Houssem-Eddine (Stagiaire 2025)</em> 🛠️ </footer>
+</body>
+</html>

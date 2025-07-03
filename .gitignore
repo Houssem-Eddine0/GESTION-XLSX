@@ -1,0 +1,25 @@
+# 🐍 Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 📦 Packages & builds
+env/
+venv/
+build/
+dist/
+*.spec
+
+# 📊 Données locales
+*.xlsx
+*.csv
+*.json
+
+# 💻 Config IDE (VSCode/PyCharm)
+.vscode/
+.idea/
+
+# 📁 Fichiers systèmes
+.DS_Store
+Thumbs.db

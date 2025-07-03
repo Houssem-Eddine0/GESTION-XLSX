@@ -1,0 +1,100 @@
+## [1.1.0] – 2025-06-30
+- Ajout bouton Parcourir dossier
+- Ajout favoris par bouton
+- Résultats affichés horizontalement
+- Lien vers le dossier contenant le fichier
+
+v1.2.0
+- Ajout favori dynamique + suppression sans rechargement
+- Résultats en tableau horizontal (comme Excel)
+- Suppression de "nan", "NaT", valeurs vides
+- Lien "ouvrir le dossier" corrigé
+
+ v1.2.1 [Instable]
+- Résultats réduits à PAD + SERIAL + ASSET
+- Affichage du chemin complet du fichier contenant la correspondance
+- Lien "ouvrir dossier" supprimé
+- Versionnage activé pour chaque évolution
+
+v1.2.2 [Instable]
+correction de recherche robuste pour gérer :
+- les espaces invisibles
+- les majuscules/minuscules
+- les types float (comme 7500409424.0)
+- les copier-coller douteux depuis Excel
+
+v1.2.3 [Instable]
+- Correction du bug de correspondance (serie == valeur) avec mask
+- Comparaison fiable même pour les float, .0, chaînes avec espaces
+- Recherche stabilisée sur tous types de fichiers Excel, y compris foireux
+
+v1.2.5 — REBASE STABLE
+- Reprise du moteur de correspondance v1.2.0
+- Comparaison fiable .str.strip().str.lower() avec == valeur
+- Résultat garanti même sur type float / texte / copier-coller
+
+
+v1.2.6
+- Résultats affichés : uniquement PAD, SERIAL, ASSET
+- Ajout d’un bouton 📋 pour copier le chemin complet du fichier
+- Suppression du lien "📂 ouvrir le dossier"
+- Compatibilité avec structure item.ligne du backend
+- Nettoyage et affichage plus clair des résultats
+
+v1.3.0 01-07-2025
+- Nouveau module : Recherche en masse (projet5)
+- Permet de coller plusieurs SERIALS et de scanner tous les fichiers .xlsx d’un dossier
+- Résultat groupé : regroupe les serials trouvés dans un même fichier/feuille
+- Affiche séparément les serials non trouvés
+- Interface simple avec textarea, bouton de lancement et retour structuré
+- Nouveau CSS léger ajouté (style_projet5.css)
+- Module accessible depuis la page d’accueil (index.html)
+
+v1.3.1
+- Ajout des favoris dans le module Recherche en masse
+- Affichage du chemin complet du fichier XLSX contenant les serials trouvés
+- Bouton 📋 pour copier le chemin dans le presse-papiers
+- Tous les serials affichés en MAJUSCULE dans les résultats
+- Expérience unifiée avec Recherche iPad (v1.2.6)
+
+v1.3.1 — Recherche en masse avec Favoris & Copier
+
+v1.3.2
+- Suppression du filtre COLONNES_SERIAL : toutes les colonnes sont désormais analysées
+- Le moteur compare chaque cellule de chaque feuille dans tous les fichiers Excel du dossier
+- Les serials sont détectés même dans des colonnes inattendues ou mal nommées
+- Affichage des serials en MAJUSCULE conservé
+
+v1.4.1
+- Module Gestion Ciblée mis à jour
+- Nouvelle opération “✏️ Modifier” ajoutée
+- Permet de modifier une valeur spécifique dans une colonne ciblée
+- Bloc dynamique dans l’interface si operation == "modifier"
+- Message de retour coloré en fonction du type d’action
+
+v1.5.0 — Interface unifiée avec favoris, navigation dossier/fichiers, et action ciblée
+
+v1.6.0 — 2025-07-03
+- Ajout du module Projet 6 : Génération TO 📤
+- Permet de coller des serials regroupés par feuille et génère un fichier TO prêt à l’envoi
+- Export automatique au format Excel dans Documents/
+- Feuilles renommées selon les groupes de serials
+- Nom de fichier personnalisable via champ “TO”
+- Gestion des favoris pour les dossiers source
+- Icône bouton et style unifié via style_projet6.css
+
+v1.7.0 — 2025-07-03
+- Ajout du module Projet 7 : Outil de préfixe SERIAL 🧪
+- Permet de transformer une liste de serials :
+  ➕ Ajouter “S” au début
+  ➖ Retirer “S” du début si présent
+- Fonctionne intégralement en JS (aucun backend requis)
+- Interface intuitive avec bouton de transformation
+- Résultat affiché dans textarea avec copier possible
+
+v1.7.1 — 2025-07-03
+- Tolérance sur le préfixe “S” intégrée au module Recherche en masse (projet5)
+- Permet de détecter “D7F0KY4L2J” même s’il est stocké comme “SD7F0KY4L2J”
+- Ajout d’un checkbox “Tolérance sur S” dans l’interface
+- Tolérance activable/désactivable dans le formulaire
+- Résultat stabilisé pour les variations de serials

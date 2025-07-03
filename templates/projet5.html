@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>📘 Recherche en masse</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_projet5.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Recherche en masse de SERIAL et ASSET</h1>
+
+    <form id="formulaire">
+      <input type="text" id="chemin" name="chemin" placeholder="📁 Dossier à explorer" required>
+
+      <div class="favoris-bar">
+        <button type="button" id="btn-ajouter">⭐ Ajouter aux favoris</button>
+        <button type="button" id="btn-supprimer">🗑️ Retirer ce favori</button>
+        <select id="favoris">
+          <option value="">— Favoris enregistrés —</option>
+          {% for fav in favoris %}
+          <option value="{{ fav }}">{{ fav }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      
+      <textarea name="serials" rows="12" placeholder="Colle ici ta liste de serials/asset (1 par ligne)" required></textarea>
+      <button type="submit">Rechercher</button>
+    </form>
+
+    <div id="resultats"></div>
+
+    <p><a href="/">⬅️ Retour</a></p>
+
+    <script src="{{ url_for('static', filename='projet5.js') }}"></script>
+  </div>
+  <footer> Version : <strong>v1.7.1</strong> — Réalisé par <em>NANE Houssem-Eddine (Stagiaire 2025)</em> 🛠️ </footer>
+</body>
+</html>

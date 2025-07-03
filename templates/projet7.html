@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>🧪 Préfixe SERIAL – Projet 7</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_projet7.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🧪 Traitement des SERIALs</h1>
+
+    <form id="prefixForm">
+      <textarea id="zoneSerials" rows="10" placeholder="Colle ici ta liste de SERIALs (1 par ligne)..."></textarea>
+
+      <div class="options">
+        <label><input type="radio" name="mode" value="ajouter" checked> ➕ Ajouter “S” en début</label>
+        <label><input type="radio" name="mode" value="retirer"> ➖ Retirer “S” s’il est en début</label>
+      </div>
+
+      <button type="submit">🔄 Transformer</button>
+    </form>
+
+    <h2>📄 Résultat</h2>
+    <textarea id="resultats" rows="10" placeholder="Résultat affiché ici..." readonly></textarea>
+
+    <p><a href="/">⬅️ Retour à l’accueil</a></p>
+
+    <script src="{{ url_for('static', filename='projet7.js') }}"></script>
+  </div>
+  <footer> Version : <strong>v1.7.1</strong> — Réalisé par <em>NANE Houssem-Eddine (Stagiaire 2025)</em> 🛠️ </footer>
+</body>
+</html>

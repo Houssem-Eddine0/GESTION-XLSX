@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #3b3b3b;
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #0078D7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #005fa3;
+}
+
+.favoris-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.favoris-bar select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+.result {
+  background: #f9f9f9;
+  border-left: 4px solid #0078D7;
+  margin: 15px 0;
+  padding: 12px 18px;
+  border-radius: 6px;
+}
+
+.result p {
+  margin: 6px 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.result button {
+  margin-top: 6px;
+  font-size: 14px;
+  padding: 6px 10px;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.result button:hover {
+  background: #e0e0e0;
+}
+
+.erreur {
+  color: #b60000;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+}
+
+.non-trouve {
+  color: #d60000;
+  font-weight: 600;
+}
+
+a {
+  color: #0078D7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
